@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+</head>
+
+<body>
+	<p><strong></strong></p><br>
+	<p>DIGITE UM NÚMERO:</p>
+	<input id="numero1">
+     <p>OPERADOR:</p>
+     <input id="operador">
+	<p>DIGITE UM NÚMERO:</p>
+	<input id="numero2">
+	<br><br>	
+	<button onclick="calcular()">CALCULAR</button>
+	<p id="resposta"></p>
+    
+    </body>
+
+     <script>
+     	function calcular(){
+     		let numero1 = parseFloat(document.getElementById("numero1").value);
+     		let numero2 = parseFloat(document.getElementById("numero2").value);
+               var operador = document.getElementById("operador").value;
+
+     		
+               if (operador == "+") {
+                    let soma = parseInt(numero1 + numero2);
+                    document.getElementById("resposta").innerHTML = "A SOMA dos numeros é = " + soma;
+               }
+               else if (operador == "-") {
+                    let sub = parseInt(numero1 - numero2);
+                    document.getElementById("resposta").innerHTML = " A SUBTRAÇÃO dos numeros é = " + sub ;
+
+               }
+               else if (operador == "*"){
+                    let mult = parseInt(numero1 * numero2);
+                    document.getElementById("resposta").innerHTML = "A MULTIPLICAÇÃO dos numeros é = " + mult;
+
+               }
+               else if (operador == "/") {
+                    let divi= parseInt(numero1 / numero2);
+                    document.getElementById("resposta").innerHTML = "A DIVISÃO dos numeros é = " + divi ;
+
+
+               }
+
+     	}
+
+     </script>
+
+
+
+</html>
